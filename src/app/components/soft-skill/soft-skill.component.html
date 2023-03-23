@@ -1,0 +1,53 @@
+<div class="row">
+  <div class="titulo-h1">
+  <h1 class="h1">Soft Skills</h1>
+    <button
+      type="button"
+      class="btn btn-dark"
+      routerLink="/newsfskill"
+      *ngIf="isLogged"
+    >
+      Agregar nueva
+    </button>
+  </div>
+  
+  <div class="grid">
+  <div
+    class="circulo grid-item"
+    *ngFor="let softSkill of softSkillList"
+  >
+    <circle-progress
+      [title]="softSkill.nombreSf"
+      [percent]="softSkill.porcentajeSf"
+      [maxPercent]="100"
+      [radius]="100"
+      [showTitle]="true"
+      [titleFontSize]="'30px'"
+      [titleColor]="'black'"
+      [showUnits]="false"
+      [showSubtitle]="false"
+      [outerStrokeWidth]="16"
+      [innerStrokeWidth]="8"
+      [outerStrokeColor]="'#AD8B73'"
+      [innerStrokeColor]="'#FFFBE9'"
+      [animation]="true"
+      [animationDuration]="500"
+      [outerStrokeGradient]="true"
+      [outerStrokeGradientStopColor]="'#FFC4E1'"
+      [outerStrokeColor]="'#FF87CA'"
+      [outerStrokeLinecap]="'square'"
+    >
+    </circle-progress>
+    <div class="circulo" *ngIf="isLogged">
+      <button
+        class="btn btn-light"
+        routerLink="/editsfskill/{{ softSkill.id }}"
+      >
+        <i class="bi bi-pencil-fill"></i>
+      </button>
+      <button class="btn btn-danger" (click)="delete(softSkill.id)">
+        <i class="bi bi-trash-fill"></i>
+      </button>
+    </div>
+  </div>
+</div>

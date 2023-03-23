@@ -1,0 +1,19 @@
+<div class="grid">
+  <div class="grid-item">
+    <img class="logoAP" src="../../../assets/logoAP.png" rel="noreferrer noopener" alt="logoAP" />
+  </div>
+  <div class="grid-item logoRedes">
+    <a href="https://www.facebook.com/Caromsasiuk" target="_blank" rel="noreferrer noopener"><img
+        src="../../../assets/logoFacebook.png" alt="logoFacebook" class="img-a" /></a>
+    <a href="https://www.instagram.com/caro_maza_/" target="_blank" rel="noreferrer noopener"><img
+        src="../../../assets/logoInstagram.png" alt="logoInstagram" class="img-a" /></a>
+    <a href="https://github.com/CarolinaMaza" target="_blank" rel="noreferrer noopener"><img
+        src="../../../assets/logoGitHub.png" alt="logoGitHub" class="img-a" /></a>
+  </div>
+  <button type="button" class="grid-item btn" (click)="login()" *ngIf="!isLogged">
+    Login
+  </button>
+  <button type="button" class="grid-item btn" (click)="onLogOut()" *ngIf="isLogged">
+    Logout
+  </button>
+</div>

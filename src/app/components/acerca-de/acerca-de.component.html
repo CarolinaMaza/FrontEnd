@@ -1,0 +1,23 @@
+<div class="row" *ngIf="persona">
+  <!-- //Tuve que sacar conteiner fluid para eliminar la franja blanca -->
+  <div class="row-item-1">
+    <div class="img-container">
+    <img class="foto-perfil" id="fotoPerfil" src="{{ persona.img }}" alt="Foto de Carolina Maza" />
+    </div>
+    <p class="nombre" id="nombre">{{ persona.nombre }} {{ persona.apellido }}</p>
+    <p class="titulo" id="titulo">{{ persona.titulo }}</p>
+  </div>
+  <div class="row-item-2">
+    <h1 class="item-inline">Acerca de mí</h1>
+    <img class="item-inline vineta" src="../../../assets/star.png" />
+    <button
+      type="button"
+      class="item-inline btn btn-dark"
+      routerLink="/editacercade/1"
+      *ngIf="isLogged"
+    >
+      Editar
+    </button>
+    <p>{{ persona.descripcion }}</p>
+  </div>
+</div>

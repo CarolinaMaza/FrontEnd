@@ -1,0 +1,16 @@
+.transition-initial {
+    animation: transitionInitial 0.75s;
+}
+
+/*Animación inicial del main, aparece del fondo*/
+@keyframes transitionInitial {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

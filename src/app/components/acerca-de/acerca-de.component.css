@@ -1,0 +1,85 @@
+.row {
+    flex-wrap: wrap;
+    padding: 20px;
+    background-color: rgb(231, 212, 181);
+    text-align: center;
+    font-family: 'Comfortaa';
+    font-size: 1.10em;
+}
+
+.row-item-1,
+.row-item-2 {
+    flex: 1 1 20em;
+}
+
+.row-item-1 {
+    align-items: end;
+}
+
+.row-item-2 {
+    margin: auto 0;
+}
+
+/*estilo de la foto de perfil*/
+.foto-perfil {
+    border-radius: 100%;
+    margin-top: -150px;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.658);
+    width: 300px;
+}
+
+@media only screen and (max-width: 999px) {
+    .foto-perfil {
+        border-radius: 100%;
+        margin-top: -20px;
+        /* margin-left: -30%; */
+        box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.658);
+        width: 200px;
+    }
+}
+
+/*estilo del nombre*/
+.nombre {
+    font-weight: bold;
+    margin-left: 10px;
+    font-size: 30px;
+}
+
+/*estilo del texto*/
+.texto {
+    margin-top: auto;
+    margin-bottom: auto
+}
+
+.item-inline {
+    display: inline;
+}
+
+.btn-dark {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    border: 0 solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+    outline: 1px solid;
+    outline-color: rgba(255, 255, 255, 0.5);
+    outline-offset: 0px;
+    text-shadow: none;
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.btn-dark:hover {
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5),
+        0 0 20px rgba(255, 255, 255, 0.2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    text-shadow: 1px 1px 2px #427388;
+}
+
+.vineta {
+    margin-bottom: 19px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 1cm;
+}

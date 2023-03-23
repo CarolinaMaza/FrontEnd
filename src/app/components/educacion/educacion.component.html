@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="titulo-h1">
+    <h1 class="h1">Educación</h1>
+    <button
+      type="button"
+      class="btn btn-dark"
+      routerLink="/newed"
+      *ngIf="isLogged"
+    >
+      Agregar nueva
+    </button>
+  </div>
+
+  <div class="grid" *ngFor="let educacion of educacionList">
+    <div class="grid-item" *ngIf="educacion">
+      <img
+        class="imagen"
+        id="imagen"
+        src="{{ educacion.imgInstitucionEd }}"
+        alt="Logo de institucion"
+        max-width="100px"
+      />
+    </div>
+    <div class="grid-item">
+      <p class="titulo">
+        {{ educacion.tituloEd }} ({{ educacion.fechaInicioEd }} -
+        {{ educacion.fechaFinEd }})
+      </p>
+      <p class="contenido">{{ educacion.institucionEd }}</p>
+    </div>
+    <div class="grid-item" *ngIf="isLogged">
+      <button class="btn btn-light" routerLink="/edited/{{ educacion.id }}">
+        <i class="bi bi-pencil-fill"></i>
+      </button>
+      <button class="btn btn-danger" (click)="delete(educacion.id)">
+        <i class="bi bi-trash-fill"></i>
+      </button>
+    </div>
+  </div>
+</div>

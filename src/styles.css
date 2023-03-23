@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+.body {
+    /* min-height: 100vh; */
+    max-width: 100vh;
+    flex: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    color: white;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Comfortaa', cursive;
+}
+
+.row>*,
+.container {
+    padding: 0px;
+}
+
+.row {
+    max-width: inherit;
+    margin: 0px;
+}
